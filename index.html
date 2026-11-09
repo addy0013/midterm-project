@@ -102,6 +102,7 @@
       <!-- drop down for Subject-->
         <label for="sbj">Subject</label>
         <select name="subject" id="sbj">
+            <option value="" selected disabled>Select a subject</option>
             <option value="general">General Inquiry</option>
             <option value="collab">Design Collaboration</option>
             <option value="experiment">Creative Experiments</option>
@@ -114,7 +115,7 @@
      <div>
       <!-- message  -->
         <label for="msg">Message</label>
-        <textarea name="message" id="msg"></textarea>
+        <textarea name="message" id="msg" required></textarea>
      </div>
 
       <div>
