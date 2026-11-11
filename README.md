@@ -10,3 +10,9 @@ Background 1: #F2C2E1
 Background 2: #A9D4D9
 Neutral 1: #262626
 Neutral 2: #F6F9Fa
+
+**Palette Use**
+Page background: Neutral 2 
+Body text: Neutral 1
+Headings and Links: Primary
+Hover Focus: Accent 1

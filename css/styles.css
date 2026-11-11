@@ -43,6 +43,8 @@ body {
   /* using grid */
   display: grid;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
 
 }
 
@@ -86,13 +88,13 @@ header {
     }
 }
 
+/* styling nav with flexbox so links are arranged in one direction and wrap when needed */
 nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
-    flex-direction: row;
     gap: 1rem;
+    flex-direction: row;
 
     a {
       color: var(--primary);
@@ -113,7 +115,8 @@ main{
   padding: 1.5rem;
 }
 
-/* styling projects with Grid */
+/* styling projects with Grid so cards align in rows and columns.
+   Auto-fit adjusts the column count to the space available.*/
 .projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
@@ -128,6 +131,10 @@ main{
 img{
   max-width: 100%;
   height: auto;
+}
+
+form *{
+  font-family: var(--bodyfont);
 }
 
 
@@ -145,6 +152,7 @@ img{
 }
 
 /* Creating media query with breakpoints */
+/* breakpoint at 746px */
 @media (min-width: 746px) {
     header {
         flex-direction: row;
