@@ -113,6 +113,18 @@ main{
   padding: 1.5rem;
 }
 
+/* styling projects with Grid */
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 0.5rem;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+}
+
 img{
   max-width: 100%;
   height: auto;
