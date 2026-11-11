@@ -40,6 +40,10 @@ body {
   line-height: 1.6;
   font-family: var(--bodyfont);
   color: var(--neutral-dark);
+  /* using grid */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
 }
 
 /*checked with WebAIM against background: 10.22:1*/
@@ -66,7 +70,7 @@ a:focus-visible {
 /* styling the header & navigation */
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
@@ -74,7 +78,7 @@ header {
     padding-right: 1.5rem;
 
     p{
-        font-family: var(--heading-font);
+        font-family: var(--headingfont);
         font-size: 1.25rem;
         color: var(--primary);
         font-weight: 700;
@@ -87,6 +91,8 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
+    flex-direction: row;
+    gap: 1rem;
 
     a {
       color: var(--primary);
@@ -101,6 +107,17 @@ nav {
 
 }
 
+main{
+  width: 100%;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* hiding skip link */
 .skip-link {
@@ -113,4 +130,11 @@ nav {
 }
 .skip-link:focus {
   top: 0;
+}
+
+/* Creating media query with breakpoints */
+@media (min-width: 746px) {
+    header {
+        flex-direction: row;
+    }
 }
