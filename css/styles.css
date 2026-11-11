@@ -15,7 +15,7 @@
     --background-pink: oklch(84% 0.073 338);
     --background-aqua: oklch(84.1% 0.04557 205.198);
     --neutral-dark: oklch(26.862% 0.00003 271.152);
-    --neutral-light: oklch(98.205% 0.004 91.461);
+    --neutral-light: oklch(98.013% 0.00354 220.952);
     --headingfont: "Raleway", Arial, Helvetica, sans-serif;
     --bodyfont: "Inter", Arial, Helvetica, sans-serif;
 }
@@ -33,18 +33,72 @@ h2{
 h3{
   font-size: 1.5rem;
 }
-/*checked with WebAIM*/
+/*checked with WebAIM: 14.3:1*/
 body {
-  background-color: var(--background-pink);
-  color: var(--primary);
+  background-color: var(--neutral-light);
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--bodyfont);
+  color: var(--neutral-dark);
 }
 
+/*checked with WebAIM against background: 10.22:1*/
 h1, h2, h3{
   line-height: 1.2;
   font-family: var(--headingfont);
+  color: var(--primary);
+}
+
+a {
+  color: var(--primary);
+}
+
+/*checked with WebAIM against background: 4.94:1*/
+a:hover {
+    color: var(--accent-plum);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--accent-plum);
+    outline-offset: 4px;
+}
+
+/* styling the header & navigation */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    p{
+        font-family: var(--heading-font);
+        font-size: 1.25rem;
+        color: var(--primary);
+        font-weight: 700;
+
+    }
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+
 }
 
 
@@ -54,7 +108,7 @@ h1, h2, h3{
   top: -100px;
   left: 0;
   z-index: 100;
-  background: #ffffff;
+  background-color: var(--neutral-light);
   padding: 8px 16px;
 }
 .skip-link:focus {
