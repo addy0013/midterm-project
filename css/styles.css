@@ -1,25 +1,51 @@
+/* selected font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:wght@100..900&display=swap');
+
+
 * {
   box-sizing: border-box;
 }
 
-/* creating color palette */
+/* creating color palette & typography */
 :root {
-    --primary: oklch(34.5% 0.066 235);
-    --secondary: oklch(73.5% 0.112 192);
-    --accent-plum: oklch(51% 0.076 328);
-    --accent-gold: oklch(79% 0.125 85);
+    --primary: oklch(35.866% 0.06107 238.218);
+    --secondary: oklch(73.664% 0.10915 195.089);
+    --accent-plum: oklch(54.234% 0.08222 332.84);
+    --accent-gold: oklch(80.592% 0.12197 82.772);
     --background-pink: oklch(84% 0.073 338);
-    --background-aqua: oklch(83% 0.045 202);
-    --neutral-dark: oklch(26% 0 0);
-    --neutral-light: oklch(98.5% 0.004 90);
+    --background-aqua: oklch(84.1% 0.04557 205.198);
+    --neutral-dark: oklch(26.862% 0.00003 271.152);
+    --neutral-light: oklch(98.205% 0.004 91.461);
+    --headingfont: "Raleway", Arial, Helvetica, sans-serif;
+    --bodyfont: "Inter", Arial, Helvetica, sans-serif;
 }
 
+
+/* fonts */
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
 /*checked with WebAIM*/
 body {
-  background-color: #F2C2E1;
-  color: #194159;
+  background-color: var(--background-pink);
+  color: var(--primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: var(--bodyfont);
 }
 
+h1, h2, h3{
+  line-height: 1.2;
+  font-family: var(--headingfont);
+}
 
 
 /* hiding skip link */
